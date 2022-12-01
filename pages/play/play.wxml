@@ -1,0 +1,45 @@
+<view class="body">
+    <!--pages/play/play.wxml-->
+    <video class="video" model:src="{{current}}"
+    poster="{{video.vod_pic}}" 
+    autoplay="{{true}}"
+    controls="{{true}}"
+    show-play-btn="{{true}}"
+    enable-play-gesture="{{true}}"
+    enable-progress-gesture="{{true}}"
+    show-bottom-progress="{{true}}"
+    show-center-play-btn='{{true}}' 
+    show-fullscreen-btn="{{true}}"
+    ></video>
+    <!-- 视频简介 -->
+    <scroll-view class="vod_content_text" scroll-y="true">
+        <image class="vod_cover" src="{{video.vod_pic}}"></image>
+        {{video.vod_content}}
+    </scroll-view>
+
+    <!-- 选集按钮 -->
+    <view class="">
+        <view class="video-switch">剧集选择</view>
+        <view wx:if="{{videoType == true}}">
+            <scroll-view class="abc" scroll-x="true" bindscroll="scroll">
+                <button class="def" enable-flex wx:for="{{videoURL.length/10}}" wx:key="index" size="mini" data-index="{{index}}" bindtap="switchVideos" >{{(index)*10+1}}-{{(index*10)+10}}</button>
+            </scroll-view>
+            <view class="vod-switch">
+                <button class="switch-btn" wx:for="{{switchs}}" wx:key="index" size="mini" bindtap="playSwitchVideo" data-index="{{(index+switchs)-10+1}}">
+                {{(index+switchs)-10+1}}</button>
+            </view>
+        </view>
+        <view wx:else>
+            <view class="vod-switch">
+                <button class="switch-btn" size="mini" bindtap="playSwitchVideo" data-index="{{videoURL[0]}}">
+                1</button>
+            </view>
+        </view>
+    </view>
+
+    <!-- 页脚 - 版权信息 -->
+    <view class="footer">
+        作者：achong
+    </view>
+
+</view>

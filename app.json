@@ -1,0 +1,37 @@
+{
+  "pages":[
+      "pages/index/index",
+      "pages/home/home",
+      "pages/my/my",
+      "pages/play/play"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff666",
+    "navigationBarTitleText": "FilmSystem",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "selectedColor": "#fff666",
+      "borderStyle": "white",
+      "list": [{
+          "pagePath": "pages/index/index",
+          "text": "",
+          "iconPath": "/image/category.png",
+          "selectedIconPath": "/image/category1.png"
+      },{
+        "pagePath": "pages/home/home",
+        "text": "",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/home1.png"
+    },{
+        "pagePath": "pages/my/my",
+        "text": "",
+        "iconPath": "/image/category.png",
+        "selectedIconPath": "/image/category1.png"
+    }]
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

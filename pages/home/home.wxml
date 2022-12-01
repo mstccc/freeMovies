@@ -1,0 +1,15 @@
+<br/>
+<br/>
+
+<view class="box">
+    <input id="searchInput" type="text" bindinput="handleInput" model:value="{{inputValue}}"/>
+    <button type="primary" size="mini" bindtap="handleAdd">add</button>
+</view>
+<view class="searchList" wx:for="{{dataList}}" wx:key="index">
+    <view class="searchList-item">
+        <view class="searchList-item-title">{{item}}</view>
+        <button class="searchList-item-index" size="mini" type="warn" bindtap="deleteData" data-index="{{index}}">delete</button>
+        <!-- <view class="searchList-item-index">{{index+1}}</view> -->
+    </view>
+</view>
+<view wx:if="{{dataList.length==0}}">暂无</view>

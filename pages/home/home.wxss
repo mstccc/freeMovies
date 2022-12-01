@@ -1,0 +1,29 @@
+.box{
+    display: flex;
+    margin: 20rpx;
+}
+
+#searchInput{
+    border: black 1rpx solid;
+    border-radius: 20rpx;
+}
+
+.searchList{
+    width: 90%;
+    /* border: black 1rpx solid; */
+    margin: 20rpx;
+}
+.searchList-item{
+    display: flex;
+    /* border-bottom: solid 1rpx #fff666; */
+    border-left: solid 10rpx #fff666;
+    margin-top: 50rpx;
+    padding-left: 20rpx;
+}
+.searchList-item-title{
+    font-size: 40rpx;
+}
+.searchList-item-index{
+    position: absolute;
+    right: 10%;
+}
